@@ -110,6 +110,8 @@
 			dependencies = (
 			);
 			name = "Home Work 13";
+			packageProductDependencies = (
+			);
 			productName = "Home Work 13";
 			productReference = A57E5A7D295E88F200BF96D1 /* Home Work 13.app */;
 			productType = "com.apple.product-type.application";
@@ -138,6 +140,8 @@
 				Base,
 			);
 			mainGroup = A57E5A74295E88F200BF96D1;
+			packageReferences = (
+			);
 			productRefGroup = A57E5A7E295E88F200BF96D1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
