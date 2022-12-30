@@ -23,7 +23,6 @@ class ViewController: UIViewController {
         return tableView
     }()
     
-    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +35,6 @@ class ViewController: UIViewController {
 
     }
 
-    
     //MARK: - Setups
     
     private func setupHierarhy() {
@@ -66,11 +64,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return cells?.count ?? 0
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cells?[section].count ?? 0
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell
@@ -79,9 +75,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         if cell?.cell?.toggle != nil {
             let switchView = UISwitch(frame: .zero)
             switchView.setOn(false, animated: true)
-//            switchView.tag = indexPath.row
-//            switchView.addTarget(self, action: #selector(switchChanged(_:)), for: .valueChanged)
+            switchView.tag = indexPath.row
+            switchView.addTarget(self, action: #selector(switchChanged), for: .valueChanged)
             cell!.accessoryView = switchView
+            cell?.selectionStyle = .default
         } else {
             cell?.accessoryType = .disclosureIndicator
             cell?.textLabel?.text = cell?.cell?.text
@@ -91,6 +88,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
         return cell ?? TableViewCell()
         
+    }
+    
+    @objc func switchChanged(_ sender : UISwitch!){
+
+          print("table row switch Changed \(sender.tag)")
+          print("The switch is \(sender.isOn ? "ON" : "OFF")")
     }
 }
 
