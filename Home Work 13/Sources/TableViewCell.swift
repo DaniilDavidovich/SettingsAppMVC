@@ -55,8 +55,8 @@ class TableViewCell: UITableViewCell {
             
             iconImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: 20),
             iconImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
-            iconImage.widthAnchor.constraint(equalToConstant: 30),
-            iconImage.heightAnchor.constraint(equalToConstant: 30),
+            iconImage.widthAnchor.constraint(equalToConstant: 25),
+            iconImage.heightAnchor.constraint(equalToConstant: 25),
             
             titleLabel.centerYAnchor.constraint(equalTo: iconImage.centerYAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: iconImage.trailingAnchor, constant: 20),
