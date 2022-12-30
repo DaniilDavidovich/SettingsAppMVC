@@ -12,6 +12,7 @@ class TableViewCell: UITableViewCell {
     var cell: Cell? {
         didSet {
             titleLabel.text = cell?.name
+            iconImage.image = cell?.icon
         }
     }
     
@@ -53,12 +54,12 @@ class TableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             
             iconImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: 20),
-            iconImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
-            iconImage.widthAnchor.constraint(equalToConstant: 10),
-            iconImage.heightAnchor.constraint(equalToConstant: 10),
+            iconImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
+            iconImage.widthAnchor.constraint(equalToConstant: 30),
+            iconImage.heightAnchor.constraint(equalToConstant: 30),
             
             titleLabel.centerYAnchor.constraint(equalTo: iconImage.centerYAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: iconImage.trailingAnchor, constant: 35),
+            titleLabel.leadingAnchor.constraint(equalTo: iconImage.trailingAnchor, constant: 20),
             
             
         ])

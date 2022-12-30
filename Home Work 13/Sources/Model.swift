@@ -14,6 +14,14 @@ enum Blocks  {
     case appStoreAndWallet
 }
 
+enum Icon {
+    static var airplaneMode = {
+        let image = UIImage(systemName: "airplane.circle.fill")!
+        image.withTintColor(.orange)
+        return image
+    }
+}
+
 struct Cell: Hashable{
     var name: String
     var icon: UIImage
@@ -27,7 +35,7 @@ extension Cell {
         // Cellular And Network
         [Cell(name: "Airplane Mode", icon: UIImage(systemName: "airplane.circle.fill")!, block: .cellularAndNetwork),
         Cell(name: "Wi-Fi", icon: UIImage(systemName: "wifi.square.fill")!, block: .cellularAndNetwork),
-        Cell(name: "Bluetooch", icon: UIImage(systemName: "wifi.square.fill")!, block: .cellularAndNetwork),
+        Cell(name: "Bluetooth", icon: UIImage(systemName: "wifi.square.fill")!, block: .cellularAndNetwork),
         Cell(name: "Mobile Data", icon: UIImage(systemName: "antenna.radiowaves.left.and.right")!, block: .cellularAndNetwork),
         Cell(name: "Personal Hotspot", icon: UIImage(systemName: "personalhotspot")!, block: .cellularAndNetwork),
         Cell(name: "VPN", icon: UIImage(named: "VPN")!, block: .cellularAndNetwork)],

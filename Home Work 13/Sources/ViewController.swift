@@ -26,28 +26,33 @@ class ViewController: UIViewController {
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
-        cells = Cell.Cells
         super.viewDidLoad()
+        cells = Cell.Cells
+        title = "Setings"
+        navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor  = .systemGray4
         setupHierarhy()
         setupLayout()
-        title = "Setings"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        
-        
     }
+    
     //MARK: - Setups
+    
     private func setupHierarhy() {
         view.addSubview(tableView)
     }
     
     private func setupLayout() {
-        tableView.snp.makeConstraints { make in
-            make.bottom.top.left.right.equalTo(view)
-        }
+        NSLayoutConstraint.activate([
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        
+        ])
     }
 }
     //MARK: - Extensions
+
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -67,11 +72,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell
         cell?.cell = cells?[indexPath.section][indexPath.row]
+//        if toggle {
+//            cell?.toggleItalics(.none)
+//        } cell?.accessoryType = .disclosureIndicator
         cell?.accessoryType = .disclosureIndicator
         return cell ?? TableViewCell()
     }
-    
-    
 }
 
 
