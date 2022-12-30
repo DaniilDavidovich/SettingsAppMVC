@@ -9,7 +9,7 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
-    var cell: Cells? {
+    var cell: Cell? {
         didSet {
             titleLabel.text = cell?.name
         }
@@ -19,13 +19,14 @@ class TableViewCell: UITableViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 20)
+        label.font = .systemFont(ofSize: 18)
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private lazy var iconImage: UIImageView = {
         let imageView = UIImageView()
-        
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         
         return imageView
     }()
@@ -51,15 +52,21 @@ class TableViewCell: UITableViewCell {
     private func setupLayout() {
         NSLayoutConstraint.activate([
             
-            iconImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            iconImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: 20),
             iconImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
-            iconImage.widthAnchor.constraint(equalToConstant: 30),
-            iconImage.heightAnchor.constraint(equalToConstant: 30),
+            iconImage.widthAnchor.constraint(equalToConstant: 10),
+            iconImage.heightAnchor.constraint(equalToConstant: 10),
             
             titleLabel.centerYAnchor.constraint(equalTo: iconImage.centerYAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: iconImage.trailingAnchor, constant: 10),
+            titleLabel.leadingAnchor.constraint(equalTo: iconImage.trailingAnchor, constant: 35),
             
             
         ])
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.accessoryType = .none
+        self.cell = nil
     }
 }
