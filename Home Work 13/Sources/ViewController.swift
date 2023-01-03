@@ -7,23 +7,23 @@
 
 import UIKit
 
-
 class ViewController: UIViewController {
     
     private var cells: [[Cell]]?
     
     //MARK: - Outlets
+    
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.dataSource = self
         tableView.delegate = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        
         return tableView
     }()
     
     //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cells = Cell.cells
@@ -39,7 +39,6 @@ class ViewController: UIViewController {
     
     private func setupHierarhy() {
         view.addSubview(tableView)
-        
     }
     
     private func setupLayout() {
@@ -87,7 +86,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             cell?.textLabel?.font = .systemFont(ofSize: 17)
         }
         return cell ?? TableViewCell()
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -96,7 +94,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let wallpaperView = WallpaperViewController()
         let detailView = DetailViewController()
         detailView.cell = cells?[indexPath.section][indexPath.row]
-        
         
         switch indexPath.section {
         case 0:
@@ -121,7 +118,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     @objc func switchChanged(_ sender : UISwitch!){
-
           print("table row switch Changed \(sender.tag)")
           print("The switch is \(sender.isOn ? "ON" : "OFF")")
     }

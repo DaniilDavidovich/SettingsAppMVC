@@ -22,8 +22,6 @@ class DetailViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 40)
         label.textColor = .black
-        
-        
         return label
     }()
     
@@ -63,7 +61,6 @@ class DetailViewController: UIViewController {
             
             label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             label.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -100)
-            
         ])
     }
     

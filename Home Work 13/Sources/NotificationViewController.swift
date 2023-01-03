@@ -11,7 +11,6 @@ class NotificationViewController: UIViewController {
     
     //MARK: - UI Elements
     
-    
     private lazy var button: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Back", for: .normal)
@@ -20,7 +19,6 @@ class NotificationViewController: UIViewController {
         button.layer.cornerRadius = 10
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(pressBack), for: .touchUpInside)
-        
         return button
     }()
     
@@ -45,7 +43,6 @@ class NotificationViewController: UIViewController {
             button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             button.widthAnchor.constraint(equalToConstant: 150),
             button.heightAnchor.constraint(equalToConstant: 75)
-        
         ])
     }
     

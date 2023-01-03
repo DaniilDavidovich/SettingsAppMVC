@@ -48,6 +48,5 @@ extension Cell {
         // AppStoreAndWallet
         [Cell(name: "App Store", icon: UIImage(named: "appstore")!, block: .appStoreAndWallet, toggle: nil, text: nil),
          Cell(name: "Wallet & Apple Pay", icon: UIImage(named: "wallet")!, block: .appStoreAndWallet, toggle: nil, text: nil)],
-        
     ]
 }
