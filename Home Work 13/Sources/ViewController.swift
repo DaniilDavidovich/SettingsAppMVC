@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        cells = Cell.Cells
+        cells = Cell.cells
         title = "Setings"
         navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor  = .systemGray4
@@ -94,6 +94,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         let notificationView = NotificationViewController()
         let wallpaperView = WallpaperViewController()
+        let detailView = DetailViewController()
+        detailView.cell = cells?[indexPath.section][indexPath.row]
         
         
         switch indexPath.section {
@@ -104,18 +106,17 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             case 0:
                 navigationController?.pushViewController(notificationView, animated: true)
             default:
-                break
+                navigationController?.pushViewController(detailView, animated: true)
             }
         case 2:
             switch indexPath.row {
             case 5:
                 navigationController?.pushViewController(wallpaperView, animated: true)
             default:
-                break
+                navigationController?.pushViewController(detailView, animated: true)
             }
-            
         default:
-            break
+            navigationController?.pushViewController(detailView, animated: true)
         }
     }
     

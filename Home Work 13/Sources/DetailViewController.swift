@@ -9,7 +9,23 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    var cell: Cell? {
+        didSet {
+            label.text = cell?.name
+        }
+    }
+    
     //MARK: - UI Elements
+    
+    private lazy var label: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 40)
+        label.textColor = .black
+        
+        
+        return label
+    }()
     
     private lazy var button: UIButton = {
         let button = UIButton(type: .system)
@@ -35,6 +51,7 @@ class DetailViewController: UIViewController {
     
     func setupHirarahy() {
         view.addSubview(button)
+        view.addSubview(label)
     }
     
     func setupLayout() {
@@ -42,7 +59,10 @@ class DetailViewController: UIViewController {
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             button.widthAnchor.constraint(equalToConstant: 150),
-            button.heightAnchor.constraint(equalToConstant: 75)
+            button.heightAnchor.constraint(equalToConstant: 75),
+            
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -100)
             
         ])
     }

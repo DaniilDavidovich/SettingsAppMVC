@@ -25,7 +25,7 @@ struct Cell: Hashable{
 extension Cell {
     
     // NOW ALWAYS IN ARRAY(ONE ARRAY FOR ONE SECTION)
-    static var Cells: [[Cell]] = [
+    static var cells: [[Cell]] = [
         // Cellular And Network
         [Cell(name: "Airplane Mode", icon: UIImage(named: "airplanemode")!, block: .cellularAndNetwork, toggle: true, text: nil),
          Cell(name: "Wi-Fi", icon: UIImage(named: "wifi")!, block: .cellularAndNetwork, toggle: true),
