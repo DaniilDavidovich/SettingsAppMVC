@@ -90,6 +90,35 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let notificationView = NotificationViewController()
+        let wallpaperView = WallpaperViewController()
+        
+        
+        switch indexPath.section {
+        case 0:
+            break
+        case 1:
+            switch indexPath.row {
+            case 0:
+                navigationController?.pushViewController(notificationView, animated: true)
+            default:
+                break
+            }
+        case 2:
+            switch indexPath.row {
+            case 5:
+                navigationController?.pushViewController(wallpaperView, animated: true)
+            default:
+                break
+            }
+            
+        default:
+            break
+        }
+    }
+    
     @objc func switchChanged(_ sender : UISwitch!){
 
           print("table row switch Changed \(sender.tag)")

@@ -14,6 +14,9 @@
 		A57E5A8D295E88F300BF96D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57E5A8B295E88F300BF96D1 /* LaunchScreen.storyboard */; };
 		A57E5A98295E8DD400BF96D1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E5A97295E8DD400BF96D1 /* Model.swift */; };
 		A57E5A9A295E9C4600BF96D1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E5A99295E9C4600BF96D1 /* TableViewCell.swift */; };
+		A5F187CF2962D6F40084DC37 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F187CE2962D6F40084DC37 /* NotificationViewController.swift */; };
+		A5F187D12962DFBB0084DC37 /* WallpaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F187D02962DFBB0084DC37 /* WallpaperViewController.swift */; };
+		A5F187D42962F5170084DC37 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F187D32962F5170084DC37 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		A57E5A8E295E88F300BF96D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A57E5A97295E8DD400BF96D1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A57E5A99295E9C4600BF96D1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		A5F187CE2962D6F40084DC37 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		A5F187D02962DFBB0084DC37 /* WallpaperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperViewController.swift; sourceTree = "<group>"; };
+		A5F187D32962F5170084DC37 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,9 @@
 				A57E5A84295E88F200BF96D1 /* ViewController.swift */,
 				A57E5A97295E8DD400BF96D1 /* Model.swift */,
 				A57E5A99295E9C4600BF96D1 /* TableViewCell.swift */,
+				A5F187CE2962D6F40084DC37 /* NotificationViewController.swift */,
+				A5F187D02962DFBB0084DC37 /* WallpaperViewController.swift */,
+				A5F187D32962F5170084DC37 /* DetailViewController.swift */,
 				A57E5A96295E891F00BF96D1 /* App */,
 			);
 			path = Sources;
@@ -168,11 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5F187D12962DFBB0084DC37 /* WallpaperViewController.swift in Sources */,
 				A57E5A9A295E9C4600BF96D1 /* TableViewCell.swift in Sources */,
 				A57E5A85295E88F200BF96D1 /* ViewController.swift in Sources */,
+				A5F187CF2962D6F40084DC37 /* NotificationViewController.swift in Sources */,
 				A57E5A81295E88F200BF96D1 /* AppDelegate.swift in Sources */,
 				A57E5A83295E88F200BF96D1 /* SceneDelegate.swift in Sources */,
 				A57E5A98295E8DD400BF96D1 /* Model.swift in Sources */,
+				A5F187D42962F5170084DC37 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
