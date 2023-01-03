@@ -44,7 +44,9 @@ class TableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implement")
     }
+    
     //MARK: - Setups
+    
     private func setupHierarhy() {
         addSubview(titleLabel)
         addSubview(iconImage)
@@ -52,7 +54,6 @@ class TableViewCell: UITableViewCell {
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
-            
             iconImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: 20),
             iconImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
             iconImage.widthAnchor.constraint(equalToConstant: 25),
@@ -60,8 +61,6 @@ class TableViewCell: UITableViewCell {
             
             titleLabel.centerYAnchor.constraint(equalTo: iconImage.centerYAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: iconImage.trailingAnchor, constant: 20),
-            
-            
         ])
     }
     
