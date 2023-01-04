@@ -4,7 +4,6 @@
 //
 //  Created by Daniil Davidovich on 2.01.23.
 //
-
 import UIKit
 
 class NotificationViewController: UIViewController {
