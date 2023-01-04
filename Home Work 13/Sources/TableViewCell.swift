@@ -12,7 +12,8 @@ class TableViewCell: UITableViewCell {
     var cell: Cell? {
         didSet {
             titleLabel.text = cell?.name
-            iconImage.image = cell?.icon
+            iconImage.image = UIImage(named: cell?.icon ?? "") 
+            
         }
     }
     
