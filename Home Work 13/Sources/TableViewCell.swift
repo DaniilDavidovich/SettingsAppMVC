@@ -66,7 +66,7 @@ class TableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.accessoryType = .none
+//        self.accessoryType = .none
         self.cell = nil
     }
 }
