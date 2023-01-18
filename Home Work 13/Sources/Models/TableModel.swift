@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class TableModel {
+ class TableModel {
     
     var createModel: [[Table]] = [
             [Table(name: "Airplane Mode",icon: "airplanemode", toggle: true),

@@ -11,11 +11,10 @@ class TableViewCell: UITableViewCell {
     
     static var identifier = "TableCell"
 
-    var cell: Table? {
-        didSet {
-            titleLabel.text = cell?.name ?? "Error"
-            iconImage.image = UIImage(named: cell?.icon ?? "error")
-        }
+    func configure(with model:Table) {
+        titleLabel.text = model.name
+        iconImage.image = UIImage(named: model.icon )
+        
     }
     
     //MARK: - Outlets
@@ -71,6 +70,5 @@ class TableViewCell: UITableViewCell {
         // for phantom
         accessoryView = nil
         self.accessoryType = .none
-        self.cell = nil
     }
 }

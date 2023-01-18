@@ -71,21 +71,22 @@ extension TableView: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as? TableViewCell
+        cell?.configure(with: models[indexPath.section][indexPath.row])
 
-        if cell?.cell?.toggle != nil {
-            let switchView = UISwitch(frame: .zero)
-            switchView.setOn(false, animated: true)
-            switchView.tag = indexPath.row
-            switchView.addTarget(self, action: #selector(switchChanged), for: .valueChanged)
-            cell!.accessoryView = switchView
-            cell?.selectionStyle = .default
-        } else {
+//        if cell?.configure?.toggle != nil {
+//            let switchView = UISwitch(frame: .zero)
+//            switchView.setOn(false, animated: true)
+//            switchView.tag = indexPath.row
+//            switchView.addTarget(self, action: #selector(switchChanged), for: .valueChanged)
+//            cell!.accessoryView = switchView
+//            cell?.selectionStyle = .default
+//        } else {
             cell?.accessoryType = .disclosureIndicator
-            cell?.textLabel?.text = cell?.cell?.text
+//            cell?.textLabel?.text = cell?.configure.text
             cell?.textLabel?.textAlignment = .right
             cell?.textLabel?.textColor = .systemGray
             cell?.textLabel?.font = .systemFont(ofSize: 17)
-        }
+//        }
         return cell ?? TableViewCell()
     }
 
