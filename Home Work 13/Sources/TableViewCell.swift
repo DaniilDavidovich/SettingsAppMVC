@@ -8,10 +8,12 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
+    
+    static var identifier = "TableCell"
 
-    var cell: Cell? {
+    var cell: Table? {
         didSet {
-            titleLabel.text = cell?.name
+            titleLabel.text = cell?.name ?? "Error"
             iconImage.image = UIImage(named: cell?.icon ?? "error")
         }
     }
@@ -68,7 +70,7 @@ class TableViewCell: UITableViewCell {
         super.prepareForReuse()
         // for phantom
         accessoryView = nil
-
+        self.accessoryType = .none
         self.cell = nil
     }
 }

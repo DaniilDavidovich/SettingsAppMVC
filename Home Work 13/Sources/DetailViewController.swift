@@ -9,7 +9,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    var cell: Cell? {
+    var cell: Table? {
         didSet {
             label.text = cell?.name
         }
