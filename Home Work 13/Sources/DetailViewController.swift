@@ -17,7 +17,7 @@ class DetailViewController: UIViewController {
     
     //MARK: - UI Elements
     
-    private lazy var label: UILabel = {
+    lazy var label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 40)

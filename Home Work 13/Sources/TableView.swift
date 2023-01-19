@@ -89,6 +89,11 @@ extension TableView: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         let detailView = DetailViewController()
         detailView.cell = models[indexPath.section][indexPath.row]
+        print(detailView.label.text)
+        let push = UINavigationController(rootViewController: detailView)
+        window?.rootViewController?.navigationController?.pushViewController(detailView, animated: true)
+        window?.rootViewController?.present(push, animated: true)
+        
     }
 
     @objc func switchChanged(_ sender : UISwitch!){
