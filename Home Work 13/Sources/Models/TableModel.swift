@@ -17,7 +17,7 @@ import Foundation
              Table(name: "Personal Hotspot", icon: "cellular", toggle: true),
              Table(name: "VPN", icon: "vpn", toggle: true)],
             
-            [Table(name: "Notification", icon: "notification", text: "Add notification"),
+            [Table(name: "Notification", icon: "notification", text: "Add Notification"),
              Table(name: "Sounds & Haptics", icon: "sound"),
              Table(name: "Focus", icon: "focus"),
              Table(name: "Screen Time", icon: "screentime")],
@@ -27,7 +27,7 @@ import Foundation
              Table(name: "Privacy", icon: "privacy"),
              Table(name: "Battary", icon:  "battery"),
              Table(name: "Emergency SOS", icon: "sos"),
-             Table(name: "Wallpapper", icon: "wallpaper")],
+             Table(name: "Wallpapper", icon: "wallpaper", text: "Add Walpapper")],
             
             [Table(name: "App Store", icon: "appstore"),
             Table(name: "Wallet & Apple Pay", icon: "wallet")]
