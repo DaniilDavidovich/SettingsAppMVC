@@ -91,8 +91,8 @@ extension TableView: UITableViewDataSource, UITableViewDelegate {
         detailView.cell = models[indexPath.section][indexPath.row]
         print(detailView.label.text)
         let push = UINavigationController(rootViewController: detailView)
-        window?.rootViewController?.navigationController?.pushViewController(detailView, animated: true)
-        window?.rootViewController?.present(push, animated: true)
+        window?.rootViewController?.navigationController?.pushViewController(push, animated: true)
+//        window?.rootViewController?.present(push, animated: true)
         
     }
 
