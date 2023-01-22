@@ -8,11 +8,15 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
+    
+    static var identifier = "TableCell"
 
-    var cell: Cell? {
-        didSet {
-            titleLabel.text = cell?.name
-            iconImage.image = UIImage(named: cell?.icon ?? "error")
+    // Подгрузка данных в ячейку (пример: Notification), с входным параметром Table
+    func configure(with model:Table) {
+        titleLabel.text = model.name
+        iconImage.image = UIImage(named: model.icon )
+        if (model.text != nil) {
+            rightLabel.text = model.text
         }
     }
     
@@ -28,10 +32,17 @@ class TableViewCell: UITableViewCell {
     private lazy var iconImage: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        
         return imageView
     }()
     
+    private lazy var rightLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .right
+        label.textColor = .systemGray
+        label.font = .systemFont(ofSize: 17)
+        return label
+    }()
     
     //MARK: - Inits
     
@@ -50,10 +61,12 @@ class TableViewCell: UITableViewCell {
     private func setupHierarhy() {
         addSubview(titleLabel)
         addSubview(iconImage)
+        addSubview(rightLabel)
     }
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
+            
             iconImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: 20),
             iconImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
             iconImage.widthAnchor.constraint(equalToConstant: 25),
@@ -61,14 +74,16 @@ class TableViewCell: UITableViewCell {
             
             titleLabel.centerYAnchor.constraint(equalTo: iconImage.centerYAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: iconImage.trailingAnchor, constant: 20),
+            
+            rightLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 315),
+            rightLabel.centerYAnchor.constraint(equalTo: iconImage.centerYAnchor)
         ])
     }
     
+    // Обновление данных при скролинге
     override func prepareForReuse() {
         super.prepareForReuse()
         // for phantom
         accessoryView = nil
-
-        self.cell = nil
     }
 }

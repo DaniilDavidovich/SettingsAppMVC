@@ -9,7 +9,8 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    var cell: Cell? {
+    // Наболюдатель для подгрузки названия ячейки в detailVC
+    var cell: Table? {
         didSet {
             label.text = cell?.name
         }
@@ -17,7 +18,7 @@ class DetailViewController: UIViewController {
     
     //MARK: - UI Elements
     
-    private lazy var label: UILabel = {
+    lazy var label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 40)
@@ -54,6 +55,7 @@ class DetailViewController: UIViewController {
     
     func setupLayout() {
         NSLayoutConstraint.activate([
+            
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             button.widthAnchor.constraint(equalToConstant: 150),
