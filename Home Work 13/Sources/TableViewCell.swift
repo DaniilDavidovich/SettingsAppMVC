@@ -11,6 +11,7 @@ class TableViewCell: UITableViewCell {
     
     static var identifier = "TableCell"
 
+    // Подгрузка данных в ячейку (пример: Notification), с входным параметром Table
     func configure(with model:Table) {
         titleLabel.text = model.name
         iconImage.image = UIImage(named: model.icon )
@@ -79,6 +80,7 @@ class TableViewCell: UITableViewCell {
         ])
     }
     
+    // Обновление данных при скролинге
     override func prepareForReuse() {
         super.prepareForReuse()
         // for phantom

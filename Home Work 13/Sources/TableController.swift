@@ -7,16 +7,18 @@
 
 import UIKit
 
+// Паттерн delagete, создания протокола (AnyObject!)
 protocol TableControllerDelegate: AnyObject {
     func pushDetail(cell: Table)
 }
 
+// Подписать Контроллер под протокол делегата
 class TableController: UIViewController, TableControllerDelegate {
     
+    // Пустая переменная с типом TableModel
     var model: TableModel?
 
-    /// Это вычисляемое свойство преобразует тип родительской view в OnboardingView
-    /// Это делается чтобы мы в будущем могли из Controller'a обращаться к элементам View
+    // Подгрузка tableView
     private var tableView: TableView? {
         guard isViewLoaded else { return nil }
         return view as? TableView
@@ -29,10 +31,14 @@ class TableController: UIViewController, TableControllerDelegate {
         title = "Setings"
         navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor  = .systemGray4
-        /// Присваиваем значению View наш созданный класс OnboardingView()
-        /// Можно это сделать в Main.storyboard, но я решил сделать так
+        
+        // Подгрузка TableView
         view = TableView()
+        
+        // Инициализация model типо TableModel
         model = TableModel()
+        
+        // Подгрузка данных в tableView
         configureView()
     }
 }
@@ -40,11 +46,18 @@ class TableController: UIViewController, TableControllerDelegate {
 // MARK: - Configurations
  extension TableController {
     func configureView() {
+        
+        // заполнение models с помощью переменной model с типом TableModel - его свойством
         guard let models = model?.createModel else { return }
+        
+        // вызов функии tableView для подгрузки данных с данными models
         tableView?.configureView(with: models)
+        
+        // Задаем, что та переменная в tableView под название delegate = нашему классу и берет свойсво и методы подходящие под этот протокол от сюда
         tableView?.delegate = self
     }
     
+     // Делегат взял эту функцию
     func pushDetail(cell: Table) {
         let detailVC = DetailViewController()
         detailVC.cell = cell

@@ -9,12 +9,15 @@ import UIKit
 
 class TableView: UIView {
     
+    // Cоздание Делегата (weak!)
     weak var delegate: TableControllerDelegate?
     
+    // Функиця для заполнение данными models типа Table для tableView
     func configureView(with models: [[Table]]) {
         self.models = models
     }
     
+    // пустая переменная типа Table
     private var models = [[Table]]()
 
     //MARK: - Outlets
@@ -49,7 +52,7 @@ class TableView: UIView {
     private func setupLayout() {
         NSLayoutConstraint.activate([
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            tableView.topAnchor.constraint(equalTo: topAnchor, constant: 0),
+            tableView.topAnchor.constraint(equalTo: topAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
