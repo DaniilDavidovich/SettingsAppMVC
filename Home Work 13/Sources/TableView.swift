@@ -82,7 +82,7 @@ extension TableView: UITableViewDataSource, UITableViewDelegate {
             switchView.setOn(false, animated: true)
             switchView.tag = indexPath.row
             switchView.addTarget(self, action: #selector(switchChanged), for: .valueChanged)
-            cell!.accessoryView = switchView
+            cell?.accessoryView = switchView
             cell?.selectionStyle = .default
         } else {
             cell?.accessoryType = .disclosureIndicator
