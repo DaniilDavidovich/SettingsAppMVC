@@ -7,7 +7,7 @@
 
 import Foundation
 
- class TableModel {
+class TableModel {
     
     var createModel: [[Table]] = [
             [Table(name: "Airplane Mode",icon: "airplanemode", toggle: true),
@@ -31,5 +31,5 @@ import Foundation
             
             [Table(name: "App Store", icon: "appstore"),
             Table(name: "Wallet & Apple Pay", icon: "wallet")]
-            ]
-    }
+     ]
+}

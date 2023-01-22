@@ -17,8 +17,6 @@ class TableViewCell: UITableViewCell {
         if (model.text != nil) {
             rightLabel.text = model.text
         }
-    
-        
     }
     
     //MARK: - Outlets
@@ -33,7 +31,6 @@ class TableViewCell: UITableViewCell {
     private lazy var iconImage: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        
         return imageView
     }()
     
@@ -43,10 +40,8 @@ class TableViewCell: UITableViewCell {
         label.textAlignment = .right
         label.textColor = .systemGray
         label.font = .systemFont(ofSize: 17)
-        
         return label
     }()
-    
     
     //MARK: - Inits
     

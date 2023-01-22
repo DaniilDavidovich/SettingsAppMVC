@@ -9,6 +9,8 @@ import UIKit
 
 class TableView: UIView {
     
+    weak var delegate: TableControllerDelegate?
+    
     func configureView(with models: [[Table]]) {
         self.models = models
     }
@@ -89,11 +91,13 @@ extension TableView: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         let detailView = DetailViewController()
         detailView.cell = models[indexPath.section][indexPath.row]
-        print(detailView.label.text)
-        let push = UINavigationController(rootViewController: detailView)
-        window?.rootViewController?.navigationController?.pushViewController(push, animated: true)
-//        window?.rootViewController?.present(push, animated: true)
         
+        switch indexPath.section {
+        case 0:
+            break
+        default:
+            delegate?.pushDetail(cell: models[indexPath.section][indexPath.row])
+        }
     }
 
     @objc func switchChanged(_ sender : UISwitch!){

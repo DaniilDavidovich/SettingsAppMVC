@@ -7,7 +7,11 @@
 
 import UIKit
 
-class TableController: UIViewController {
+protocol TableControllerDelegate: AnyObject {
+    func pushDetail(cell: Table)
+}
+
+class TableController: UIViewController, TableControllerDelegate {
     
     var model: TableModel?
 
@@ -29,17 +33,22 @@ class TableController: UIViewController {
         /// Можно это сделать в Main.storyboard, но я решил сделать так
         view = TableView()
         model = TableModel()
-
         configureView()
     }
 }
 
 // MARK: - Configurations
-
-private extension TableController {
+ extension TableController {
     func configureView() {
         guard let models = model?.createModel else { return }
         tableView?.configureView(with: models)
+        tableView?.delegate = self
+    }
+    
+    func pushDetail(cell: Table) {
+        let detailVC = DetailViewController()
+        detailVC.cell = cell
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 
