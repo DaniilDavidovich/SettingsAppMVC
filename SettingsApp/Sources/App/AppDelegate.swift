@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Home Work 13
+//  SettingsApp
 //
 //  Created by Daniil Davidovich on 30.12.22.
 //

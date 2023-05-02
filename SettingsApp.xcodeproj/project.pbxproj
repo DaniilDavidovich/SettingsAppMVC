@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A57E5A7D295E88F200BF96D1 /* Home Work 13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Home Work 13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A57E5A7D295E88F200BF96D1 /* SettingsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SettingsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57E5A80295E88F200BF96D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A57E5A82295E88F200BF96D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A57E5A84295E88F200BF96D1 /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		A57E5A74295E88F200BF96D1 = {
 			isa = PBXGroup;
 			children = (
-				A57E5A7F295E88F200BF96D1 /* Home Work 13 */,
+				A57E5A7F295E88F200BF96D1 /* SettingsApp */,
 				A57E5A7E295E88F200BF96D1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,18 +56,18 @@
 		A57E5A7E295E88F200BF96D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A57E5A7D295E88F200BF96D1 /* Home Work 13.app */,
+				A57E5A7D295E88F200BF96D1 /* SettingsApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A57E5A7F295E88F200BF96D1 /* Home Work 13 */ = {
+		A57E5A7F295E88F200BF96D1 /* SettingsApp */ = {
 			isa = PBXGroup;
 			children = (
 				A57E5A95295E890E00BF96D1 /* Sources */,
 				A57E5A94295E890000BF96D1 /* Resources */,
 			);
-			path = "Home Work 13";
+			path = SettingsApp;
 			sourceTree = "<group>";
 		};
 		A57E5A94295E890000BF96D1 /* Resources */ = {
@@ -114,9 +114,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A57E5A7C295E88F200BF96D1 /* Home Work 13 */ = {
+		A57E5A7C295E88F200BF96D1 /* SettingsApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A57E5A91295E88F300BF96D1 /* Build configuration list for PBXNativeTarget "Home Work 13" */;
+			buildConfigurationList = A57E5A91295E88F300BF96D1 /* Build configuration list for PBXNativeTarget "SettingsApp" */;
 			buildPhases = (
 				A57E5A79295E88F200BF96D1 /* Sources */,
 				A57E5A7A295E88F200BF96D1 /* Frameworks */,
@@ -126,11 +126,11 @@
 			);
 			dependencies = (
 			);
-			name = "Home Work 13";
+			name = SettingsApp;
 			packageProductDependencies = (
 			);
 			productName = "Home Work 13";
-			productReference = A57E5A7D295E88F200BF96D1 /* Home Work 13.app */;
+			productReference = A57E5A7D295E88F200BF96D1 /* SettingsApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -148,7 +148,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A57E5A78295E88F200BF96D1 /* Build configuration list for PBXProject "Home Work 13" */;
+			buildConfigurationList = A57E5A78295E88F200BF96D1 /* Build configuration list for PBXProject "SettingsApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -163,7 +163,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A57E5A7C295E88F200BF96D1 /* Home Work 13 */,
+				A57E5A7C295E88F200BF96D1 /* SettingsApp */,
 			);
 		};
 /* End PBXProject section */
@@ -333,7 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8PHY3R68LB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Home Work 13/Resources/Info.plist";
+				INFOPLIST_FILE = SettingsApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -343,7 +343,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.my.Home-Work-13";
+				PRODUCT_BUNDLE_IDENTIFIER = com.my.SettingsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -360,7 +360,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8PHY3R68LB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Home Work 13/Resources/Info.plist";
+				INFOPLIST_FILE = SettingsApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -370,7 +370,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.my.Home-Work-13";
+				PRODUCT_BUNDLE_IDENTIFIER = com.my.SettingsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -381,7 +381,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A57E5A78295E88F200BF96D1 /* Build configuration list for PBXProject "Home Work 13" */ = {
+		A57E5A78295E88F200BF96D1 /* Build configuration list for PBXProject "SettingsApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A57E5A8F295E88F300BF96D1 /* Debug */,
@@ -390,7 +390,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A57E5A91295E88F300BF96D1 /* Build configuration list for PBXNativeTarget "Home Work 13" */ = {
+		A57E5A91295E88F300BF96D1 /* Build configuration list for PBXNativeTarget "SettingsApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A57E5A92295E88F300BF96D1 /* Debug */,

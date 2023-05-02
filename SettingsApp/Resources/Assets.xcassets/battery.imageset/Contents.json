@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "icons8-полный-заряд-100.png",
+      "filename" : "icons8-полный-заряд-100 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "icons8-полный-заряд-100 2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "icons8-полный-заряд-100 3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

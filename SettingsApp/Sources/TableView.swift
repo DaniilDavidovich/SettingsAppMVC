@@ -1,6 +1,6 @@
 //
 //  TableView.swift
-//  Home Work 13
+//  SettingsApp
 //
 //  Created by Daniil Davidovich on 18.01.23.
 //
